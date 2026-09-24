@@ -41,7 +41,7 @@ offers:
       benefits:
         - applies_to: JaxSuite AI Outreach and CRM subscription plans
           benefit_id: ben_01
-          description: 50% off the Outreach and CRM plans for 12 consecutive months, up to $45,000 in total savings, applied to the existing workspace
+          description: 50% off the Outreach and CRM plans for 12 consecutive months.
           duration:
             kind: exact
             value: P1Y
@@ -51,7 +51,7 @@ offers:
             kind: exact
       consideration:
         kind: variable
-        description: The startup pays the remaining 50% of its Outreach and CRM subscription prices for 12 months.
+        description: The startup receives a 50% discount on both the Outreach and CRM subscription plans for 12 months.
     eligibility:
       rule:
         kind: all
