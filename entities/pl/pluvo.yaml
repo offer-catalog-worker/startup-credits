@@ -33,17 +33,16 @@ offers:
     offer_slug: pluvo-startup-plus-plan-discount
     offer_slug_aliases: []
     title: Pluvo Plus at $1,200 per month for startups
-    summary: New customers with under $5 million in annual revenue get the full Pluvo Plus plan at $1,200 per month instead of $1,500 for their first 12 months, kept at renewal while still under $5 million.
+    summary: Companies new to Pluvo with under $5M in annual revenue get the full Plus plan at $1,200 per month instead of $1,500, 20% off, for their first 12 months.
     lifecycle:
       status: active
       effective_from: 2026-08-26T18:50:00.475Z
     economics:
       benefits:
-        - applies_to: Pluvo Plus plan
-          benefit_id: ben_01
-          description: 20% off the Plus plan, $1,200 per month instead of $1,500, for the first 12 months and at renewal while annual revenue stays under $5 million
+        - benefit_id: ben_01
+          description: 20% off the Plus plan, $1,200 per month instead of $1,500, for the first 12 months.
           duration:
-            kind: at-least
+            kind: exact
             value: P1Y
           kind: discount
           percentage:
@@ -51,31 +50,13 @@ offers:
             kind: exact
       consideration:
         kind: variable
-        description: The startup pays $1,200 per month for the Plus plan instead of the standard $1,500 per month.
+        description: The startup receives the Plus plan at $1,200 per month instead of $1,500, 20% off, for its first 12 months.
     eligibility:
       rule:
-        kind: all
-        rules:
-          - criterion_id: cri_01
-            fact: company.annual_revenue_usd
-            kind: predicate
-            operator: lt
-            statement: The company has less than $5 million in annual revenue, self-attested when applying.
-            value:
-              type: number
-              value: 5000000
-          - criterion_id: cri_02
-            fact: company.is_current_customer
-            kind: predicate
-            operator: eq
-            statement: The company is new to Pluvo.
-            value:
-              type: boolean
-              value: false
-          - criterion_id: cri_03
-            kind: manual
-            reason: vendor-discretion
-            statement: Pluvo confirms eligibility on a short call after the application.
+        kind: manual
+        criterion_id: cri_01
+        reason: not-machine-evaluable
+        statement: Companies new to Pluvo with under $5M in annual revenue qualify; eligibility is self-attested when applying and Pluvo may confirm it for edge cases.
     roles:
       terms_authority_entity_id: ent_01m0zpgrcveaqvf277edh51k8w
       access_operator_entity_id: ent_01m0zpgrcveaqvf277edh51k8w
