@@ -10,18 +10,21 @@ entity:
       valid_from: 2026-08-26T18:50:00.475Z
   category: marketing
 profile:
-  description: Referral Factory is referral program software for launching, promoting, tracking, qualifying, and rewarding customer referrals.
+  summary: Referral Factory is referral program software that helps businesses launch, promote, track, qualify, and reward customer referrals.
+  description: Referral Factory, based in Amsterdam, makes referral marketing software for launching, managing, tracking, and rewarding customer referral programs.
   links:
     site: https://referral-factory.com
 sources:
   - source_id: src_c8104fedf2f313559cfa58a4a7dd4393094a009a6d27ca3d3b336f3a8a01bcb5
     url: https://referral-factory.com/startup-program
+  - source_id: src_cdaad566255089a1e4123dafc9327b5936cbc3696902815f9c135b8091326ea4
+    url: https://referral-factory.com/
 programs:
   - program_id: prg_01m0zpgrcvrk23bgrx7jx8wp2s
     program_slug: referral-factory-startup-program
     program_slug_aliases: []
     title: Referral Factory Startup Program
-    summary: Referral Factory gives qualifying startups and small businesses 50% off an eligible subscription to its referral marketing platform.
+    summary: Referral Factory's startup program gives qualifying startups and small businesses 50% off qualifying subscriptions to its referral program software.
     source_ids:
       - src_c8104fedf2f313559cfa58a4a7dd4393094a009a6d27ca3d3b336f3a8a01bcb5
 offers:
@@ -29,14 +32,14 @@ offers:
     program_id: prg_01m0zpgrcvrk23bgrx7jx8wp2s
     offer_slug: referral-factory-startup-50-percent-off
     offer_slug_aliases: []
-    title: 50% Off Referral Factory
-    summary: Approved startups and small businesses receive 50% off a qualifying Referral Factory subscription.
+    title: 50% off Referral Factory
+    summary: Qualifying startups and small businesses approved through the startup program receive 50% off a qualifying Referral Factory subscription on the full product.
     lifecycle:
       status: active
       effective_from: 2026-08-26T18:50:00.475Z
     economics:
       benefits:
-        - applies_to: qualifying Referral Factory subscription
+        - applies_to: Qualifying Referral Factory subscriptions
           benefit_id: ben_01
           description: 50% off a qualifying Referral Factory subscription
           kind: discount
@@ -45,7 +48,7 @@ offers:
             kind: exact
       consideration:
         kind: variable
-        description: The applicant purchases an eligible subscription at the discounted price.
+        description: The approved business pays the remaining 50% of the price of a qualifying Referral Factory subscription.
     eligibility:
       rule:
         kind: all
@@ -53,11 +56,11 @@ offers:
           - criterion_id: cri_01
             kind: manual
             reason: external-verification
-            statement: The applicant is a qualifying startup or small business
+            statement: The applicant is an early-stage team or small business launching a referral program, not a team that needs a custom enterprise deal.
           - criterion_id: cri_02
             kind: manual
-            reason: external-verification
-            statement: Referral Factory approves the application after a human eligibility review
+            reason: vendor-discretion
+            statement: Referral Factory reviews each application to decide whether the team fits the startup-program criteria.
     roles:
       terms_authority_entity_id: ent_01m0zpgrcv4ywnffqt37evv1wg
       access_operator_entity_id: ent_01m0zpgrcv4ywnffqt37evv1wg
@@ -65,5 +68,6 @@ offers:
       availability: public
       method: form
       url: https://referral-factory.com/startup-program
+      instructions: Submit name, work email, business name, and website through the application form on the startup program page.
     source_ids:
       - src_c8104fedf2f313559cfa58a4a7dd4393094a009a6d27ca3d3b336f3a8a01bcb5
