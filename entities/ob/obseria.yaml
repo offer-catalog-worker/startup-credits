@@ -77,8 +77,7 @@ offers:
       access_operator_entity_id: ent_01m0zpgrcqphx5cnr9pgqch2cv
     access:
       availability: public
-      method: form
+      method: contact
       url: https://obseria.io/en/pricing/startup/
-      instructions: Send company details through the application on the startup page or to the startup email address listed there.
     source_ids:
       - src_b314ee1e19d2f53abcccce2e055ac64ef3f1a51efb08559794add6ce36ffba12
