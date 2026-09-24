@@ -42,9 +42,8 @@ offers:
       effective_from: 2026-08-26T18:50:00.475Z
     economics:
       benefits:
-        - applies_to: Swarmia Standard or Enterprise annual plan
-          benefit_id: ben_01
-          description: 50% off a Standard or Enterprise annual plan for the first full year
+        - benefit_id: ben_01
+          description: A 50% discount for startups with up to 50 engineers, applied to Standard and Enterprise plans and valid for the first full year.
           duration:
             kind: exact
             value: P1Y
@@ -54,7 +53,7 @@ offers:
             kind: exact
       consideration:
         kind: variable
-        description: The discount requires an annual deal; the company pays 50% of the Standard or Enterprise plan price for the first full year.
+        description: The startup receives a 50% discount for the first full year, which requires an annual deal.
     eligibility:
       rule:
         kind: all
