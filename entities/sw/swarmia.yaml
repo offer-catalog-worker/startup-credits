@@ -10,7 +10,8 @@ entity:
       valid_from: 2026-08-26T18:50:00.475Z
   category: productivity
 profile:
-  description: Swarmia is an engineering intelligence platform for software delivery metrics, developer experience, workflow visibility, and team improvement.
+  summary: Swarmia is an engineering intelligence platform that combines engineering metrics, AI coding tool insights, and developer experience surveys.
+  description: Swarmia provides engineering metrics, AI coding tool adoption and cost insights, software capitalization reports, and developer experience surveys for engineering organizations.
   links:
     site: https://www.swarmia.com
 sources:
@@ -18,12 +19,14 @@ sources:
     url: https://www.swarmia.com/startups/
   - source_id: src_97ea6e8aa7989ef99583de37cddedc6a1c014eb98fb9f80c79c37279dcfd7b9e
     url: https://www.swarmia.com/partner-program/
+  - source_id: src_72d27c7365da9ab7a3cf27cc948dba0bd6a457c4ebf4e3348d11456737d2d5bf
+    url: https://www.swarmia.com/
 programs:
   - program_id: prg_01m0zpgrct808p2k4247h9p1q7
     program_slug: swarmia-for-startups
     program_slug_aliases: []
     title: Swarmia for Startups
-    summary: Swarmia gives eligible new startup customers with up to 50 engineers 50% off Standard or Enterprise annual plans for their first year.
+    summary: Companies new to Swarmia whose investor is a Swarmia program partner get up to 50% off their first year of a Standard or Enterprise annual plan.
     source_ids:
       - src_017a0e95be194089dedbdec784b34c0bfffc52a3d686034e8b35805675545be7
       - src_97ea6e8aa7989ef99583de37cddedc6a1c014eb98fb9f80c79c37279dcfd7b9e
@@ -32,8 +35,8 @@ offers:
     program_id: prg_01m0zpgrct808p2k4247h9p1q7
     offer_slug: swarmia-startup-50-percent-off
     offer_slug_aliases: []
-    title: 50% Off Swarmia for One Year
-    summary: Eligible startup customers with up to 50 engineers receive 50% off a Standard or Enterprise annual plan for the first year.
+    title: 50% off Swarmia for the first year
+    summary: Startups with up to 50 engineers that are new to Swarmia and backed by a Swarmia partner investor receive 50% off a Standard or Enterprise annual plan for the first full year.
     lifecycle:
       status: active
       effective_from: 2026-08-26T18:50:00.475Z
@@ -51,31 +54,27 @@ offers:
             kind: exact
       consideration:
         kind: variable
-        description: The startup purchases an eligible annual plan at the discounted price.
+        description: The discount requires an annual deal; the company pays 50% of the Standard or Enterprise plan price for the first full year.
     eligibility:
       rule:
         kind: all
         rules:
           - criterion_id: cri_01
-            fact: company.employee_count
-            kind: predicate
-            operator: lte
-            statement: The applicant has no more than 50 engineers
-            value:
-              type: number
-              value: 50
+            kind: manual
+            reason: external-verification
+            statement: The startup has up to 50 engineers.
           - criterion_id: cri_02
             fact: company.is_current_customer
             kind: predicate
             operator: eq
-            statement: The applicant is new to Swarmia
+            statement: The company is new to Swarmia's Standard or Enterprise annual plan.
             value:
               type: boolean
               value: false
           - criterion_id: cri_03
             kind: manual
             reason: external-verification
-            statement: The applicant is associated with a member of Swarmia's partner program
+            statement: The company's investor is already a member of Swarmia's partner program, which Swarmia verifies before granting the discount.
     roles:
       terms_authority_entity_id: ent_01m0zpgrct7817aadmvebkmeph
       access_operator_entity_id: ent_01m0zpgrct7817aadmvebkmeph
@@ -83,6 +82,7 @@ offers:
       availability: public
       method: form
       url: https://www.swarmia.com/startup-signup/
+      instructions: Fill out the startup signup form to receive a discount code, or mention the investor when speaking with the Swarmia team.
     source_ids:
       - src_017a0e95be194089dedbdec784b34c0bfffc52a3d686034e8b35805675545be7
       - src_97ea6e8aa7989ef99583de37cddedc6a1c014eb98fb9f80c79c37279dcfd7b9e
