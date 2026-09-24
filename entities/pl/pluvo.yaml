@@ -10,18 +10,21 @@ entity:
       valid_from: 2026-08-26T18:50:00.475Z
   category: finance-accounting
 profile:
-  description: Pluvo is an AI finance platform for financial planning, reporting, forecasting, and connected analysis across accounting and revenue systems.
+  summary: Pluvo is an AI platform for finance teams that connects finance systems and produces planning, reporting, and forecasting traced to source data.
+  description: Pluvo provides AI for finance teams that connects accounting, CRM, and billing systems and turns their data into traceable reports, plans, and forecasts.
   links:
     site: https://pluvo.io
 sources:
   - source_id: src_03c69fb95aa07d00fa069fe9186ce2a81266c30af4f42b80cfac25d7e6802262
     url: https://pluvo.io/startups
+  - source_id: src_ed6217cd797de42a7473ffc09133870ef07ff2f26f3da7a82c3b3eec3b2e1517
+    url: https://pluvo.io/
 programs:
   - program_id: prg_01m0zpgrcvzabtqamje6z3phzx
     program_slug: pluvo-for-startups
     program_slug_aliases: []
     title: Pluvo for Startups
-    summary: Pluvo gives eligible new customers with under $5 million in annual revenue 20% off the Plus plan for their first 12 months.
+    summary: Pluvo for Startups gives new customers with under $5 million in annual revenue the Plus plan at 20% off for their first 12 months.
     source_ids:
       - src_03c69fb95aa07d00fa069fe9186ce2a81266c30af4f42b80cfac25d7e6802262
 offers:
@@ -29,8 +32,8 @@ offers:
     program_id: prg_01m0zpgrcvzabtqamje6z3phzx
     offer_slug: pluvo-startup-plus-plan-discount
     offer_slug_aliases: []
-    title: 20% Off Pluvo Plus for One Year
-    summary: Eligible new customers with under $5 million in annual revenue receive the Plus plan for $1,200 per month instead of $1,500 for 12 months.
+    title: Pluvo Plus at $1,200 per month for startups
+    summary: New customers with under $5 million in annual revenue get the full Pluvo Plus plan at $1,200 per month instead of $1,500 for their first 12 months, kept at renewal while still under $5 million.
     lifecycle:
       status: active
       effective_from: 2026-08-26T18:50:00.475Z
@@ -38,19 +41,17 @@ offers:
       benefits:
         - applies_to: Pluvo Plus plan
           benefit_id: ben_01
-          description: 20% off the Plus plan, reducing its monthly price from $1,500 to $1,200 for the first year
+          description: 20% off the Plus plan, $1,200 per month instead of $1,500, for the first 12 months and at renewal while annual revenue stays under $5 million
           duration:
-            kind: exact
+            kind: at-least
             value: P1Y
           kind: discount
           percentage:
             basis_points: 2000
             kind: exact
       consideration:
-        amount:
-          currency: USD
-          minor_units: 120000
-        kind: fixed
+        kind: variable
+        description: The startup pays $1,200 per month for the Plus plan instead of the standard $1,500 per month.
     eligibility:
       rule:
         kind: all
@@ -59,7 +60,7 @@ offers:
             fact: company.annual_revenue_usd
             kind: predicate
             operator: lt
-            statement: The applicant has less than $5 million in annual revenue
+            statement: The company has less than $5 million in annual revenue, self-attested when applying.
             value:
               type: number
               value: 5000000
@@ -67,10 +68,14 @@ offers:
             fact: company.is_current_customer
             kind: predicate
             operator: eq
-            statement: The applicant is new to Pluvo
+            statement: The company is new to Pluvo.
             value:
               type: boolean
               value: false
+          - criterion_id: cri_03
+            kind: manual
+            reason: vendor-discretion
+            statement: Pluvo confirms eligibility on a short call after the application.
     roles:
       terms_authority_entity_id: ent_01m0zpgrcveaqvf277edh51k8w
       access_operator_entity_id: ent_01m0zpgrcveaqvf277edh51k8w
@@ -78,5 +83,6 @@ offers:
       availability: public
       method: form
       url: https://pluvo.io/startups
+      instructions: Apply for startup pricing through the form on the Pluvo for Startups page.
     source_ids:
       - src_03c69fb95aa07d00fa069fe9186ce2a81266c30af4f42b80cfac25d7e6802262
